@@ -1,7 +1,14 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/constants/app_font.dart';
+import 'package:fruits_app/feature/splash/splash_screen.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    DevicePreview(
+      builder: (context) => const MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {
@@ -9,12 +16,14 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,    
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
+    theme: ThemeData(
+        fontFamily: AppFont.poppins,
       ),
+      home: SplashScreen(),
     );
   }
 }
