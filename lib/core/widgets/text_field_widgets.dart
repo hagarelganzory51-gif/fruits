@@ -6,11 +6,11 @@ class TextFieldWidgets extends StatelessWidget {
   const TextFieldWidgets({
     super.key,
     required this.labelText,
-    required this.icon,
+     this.icon,
   });
 
   final String labelText;
-  final Widget icon;
+  final Widget? icon;
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -14,7 +14,7 @@ class WelcomeScreen extends StatelessWidget {
     return Scaffold(
       appBar:AppBar(),
       body:Padding(
-        padding: const EdgeInsets.all(30),
+        padding: const EdgeInsets.all(20),
         child: Column(
           children: [
             Center(child: Text("Fruit Market",style:TextStyles.style24.copyWith(
@@ -54,15 +54,59 @@ class WelcomeScreen extends StatelessWidget {
                   Text('Already member?',style: TextStyles.style18.copyWith(
                     fontWeight: FontWeight.w400,
                   )),
-                  TextButton(onPressed: (){}, 
-                  child: Text('Sign In',style: TextStyles.style18.copyWith(
-                    fontWeight: FontWeight.w400,
-                    
-                    color: AppColors.bluecolor
-                  ))),
+                  Column(
+                    children: [
+                      TextButton(onPressed: (){}, 
+                      child: Text('Sign In',style: TextStyles.style18.copyWith(
+                        fontWeight: FontWeight.w400,
+                        
+                        color: AppColors.bluecolor
+                      ))),
+                       Container(
+                          width: 60,
+                          height: 2,
+                          color: AppColors.bluecolor,
+                        ),
+                    ],
+                  ),
                 ],
                ),
                 SizedBox(height: 50,),
+                Text.rich(
+                TextSpan(
+                  text: 'By continue you agree to our ',
+                  style: TextStyles.style16.copyWith(
+                    color: AppColors.greyColor,
+                    fontWeight: FontWeight.w400
+                  ),
+                  children: [
+                    TextSpan(
+                      text: 'Terms of service',
+                     style: TextStyles.style16.copyWith(
+                    color: AppColors.bluecolor,
+                    fontWeight: FontWeight.w400
+                  ),
+       
+                      ),
+                      TextSpan(
+                        text: '\nand our ', 
+                        style: TextStyles.style16.copyWith(
+                           color: AppColors.greyColor,
+                           fontWeight: FontWeight.w400
+                  ),
+                      ),
+                      TextSpan(
+                        text: 'Privacy Policy',
+                       style: TextStyles.style16.copyWith(
+                     color: AppColors.bluecolor,
+                     fontWeight: FontWeight.w400
+                  ),
+        
+                            ),
+                          ],
+                        ),
+                        textAlign: TextAlign.center, 
+                      )
                         
           ],
         ),

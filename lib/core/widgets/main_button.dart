@@ -7,10 +7,12 @@ class MainButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.onPressed,
+    
   });
    
   final String text;
   final void Function()? onPressed;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +24,13 @@ class MainButton extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: AppColors.primaryColor,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(40),
             ),
           ),
           child: Text(text,
           style: TextStyles.style16.copyWith(
-          fontWeight: FontWeight.w400,color: AppColors.whiteColor),),
+          fontWeight: FontWeight.w400,
+          color: AppColors.whiteColor),),
           
         ),
         
