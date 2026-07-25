@@ -7,5 +7,7 @@ class ImageApp {
 static const String googleSvg = 'assets/icons/google.svg';
 static const String faceSvg = 'assets/icons/face.svg';
   static const String phoneSvg = 'assets/icons/phone.svg';
+static const String searchSvg = 'assets/icons/search.svg';
+static const String layerSvg = 'assets/icons/Layer.svg';
  
 }

@@ -20,9 +20,7 @@ class PhoneNumberScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,
                 fontSize: 40,
-                ),
-                ),
-                ),
+                ) )),
                 SizedBox(height: 20,),
                 Center(child: Text("Enter your Number",style:TextStyles.style24.copyWith(
                 fontWeight: FontWeight.bold,
