@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fruits_app/core/constants/image_app.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/text_styles.dart';
+import 'package:fruits_app/feature/home/widgets/slider.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: AppColors.whiteColor,
+         backgroundColor: AppColors.whiteColor,
         elevation: 0, 
       scrolledUnderElevation: 0,
       centerTitle: false,
@@ -25,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: AppColors.primaryColor,
                 fontSize: 30,
                 ) ),
-                actions: [
+                 actions: [
                   IconButton(onPressed: (){},
                    icon: SvgPicture.asset(ImageApp.searchSvg,width: 20,
                    colorFilter: const ColorFilter.mode(
@@ -41,10 +42,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                    ),),
                 ],
-                
-                
-               
+      
       ),
+      body: Column(
+        children: [
+          Sliders(),
+          
+        ],
+      ),
+
     );
   }
 }
