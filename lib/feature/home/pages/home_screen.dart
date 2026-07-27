@@ -14,9 +14,13 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+ 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
          backgroundColor: AppColors.whiteColor,
         elevation: 0, 
@@ -42,33 +46,23 @@ class _HomeScreenState extends State<HomeScreen> {
                               BlendMode.srcIn,
                         ),
                    ),),
+                   
                 ],
+                bottom:PreferredSize(
+                  preferredSize: Size.fromHeight(1.0),
+                   child: Container(
+                         color: AppColors.greyColor, 
+                         height: 1.0,                
+                ),) ,
       
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10),
+       padding: const EdgeInsets.only(top: 0, left: 10, right: 10, bottom: 10),
         child: SingleChildScrollView(
           child: Column(
             children: [
               Sliders(),
-              Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(4, (index) {
-              return Container(
-          margin: const EdgeInsets.symmetric(horizontal: 3),
-          width: 10,
-          height: 10,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: index == 0 ? AppColors.primaryColor : Colors.transparent,
-            border: Border.all(
-              color: index == 0 ?  AppColors.primaryColor:  AppColors.greyColor,
-              width: 1.5,
-            ),
-          ),
-              );
-            }),
-          ),
+                
               SizedBox(height: 20,),
              ListViewProduct(),
             
