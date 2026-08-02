@@ -3,10 +3,10 @@ class ImageApp {
   static const String welcome = 'assets/images/welcome.png';
   static const String onboarding = 'assets/images/onboarding.png';
   static const String silder = 'assets/images/slider.png';
-  static const String image1 = 'assets/images/image1.svg';
-  static const String image2 = 'assets/images/image2.svg';
-  static const String image3 = 'assets/images/image3.svg';
-  static const String image4 = 'assets/images/image4.svg';
+  static const String image1 = 'assets/images/image1.png';
+  static const String image2 = 'assets/images/image2.png';
+  static const String image3 = 'assets/images/image3.png';
+  static const String image4 = 'assets/images/image4.png';
 
 
 static const String googleSvg = 'assets/icons/google.svg';
