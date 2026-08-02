@@ -52,7 +52,9 @@ class DatailsScreen extends StatelessWidget {
                 ),) ,
       ),
       body:Column(
-        children:[]
+        children:[
+          
+        ]
       )
     );
   }
