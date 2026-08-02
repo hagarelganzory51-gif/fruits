@@ -24,6 +24,7 @@ static const String deliverySvg = 'assets/icons/delivery.svg';
 static const String vectorSvg = 'assets/icons/vector.svg';
 static const String locationSvg = 'assets/icons/location.svg';
 static const String cartSvg = 'assets/icons/cart.svg';
+static const String loadSvg = 'assets/icons/cart.svg';
 
 
  
