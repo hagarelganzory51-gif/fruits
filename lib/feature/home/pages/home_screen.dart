@@ -47,7 +47,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               BlendMode.srcIn,
                         ),
                    ),),
-                   
                 ],
                 bottom:PreferredSize(
                   preferredSize: Size.fromHeight(1.0),
