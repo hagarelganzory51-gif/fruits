@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_app/core/constants/image_app.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
-import 'package:fruits_app/feature/details/pages/datails_screen.dart';
 import 'package:fruits_app/feature/home/pages/home_screen.dart';
 
 class MainAPPScreen extends StatefulWidget {
@@ -16,7 +15,7 @@ class _MainAPPScreenState extends State<MainAPPScreen> {
   int currentindex=0;
   List<Widget>screen=[
       HomeScreen(),
-      DatailsScreen(),
+      Container(color: Colors.black,),
        Container(color: Colors.black,),
        Container(color: Colors.blue,),
        Container(color: Colors.amber,)
