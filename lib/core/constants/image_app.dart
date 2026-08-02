@@ -7,6 +7,7 @@ class ImageApp {
   static const String image2 = 'assets/images/image2.png';
   static const String image3 = 'assets/images/image3.png';
   static const String image4 = 'assets/images/image4.png';
+  static const String shop = 'assets/images/shop.png';
 
 
 static const String googleSvg = 'assets/icons/google.svg';
@@ -24,7 +25,7 @@ static const String deliverySvg = 'assets/icons/delivery.svg';
 static const String vectorSvg = 'assets/icons/vector.svg';
 static const String locationSvg = 'assets/icons/location.svg';
 static const String cartSvg = 'assets/icons/cart.svg';
-static const String loadSvg = 'assets/icons/cart.svg';
+static const String loadSvg = 'assets/icons/load.svg';
 
 
  
