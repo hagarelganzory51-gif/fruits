@@ -6,6 +6,6 @@ void pushTo(BuildContext context, Widget screen) {
 void pushReplacement(BuildContext context, Widget screen) {
   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => screen));
 }
-void pop(BuildContext context) {
+void pop(BuildContext context, Widget screen) {
   Navigator.pop(context);
 }

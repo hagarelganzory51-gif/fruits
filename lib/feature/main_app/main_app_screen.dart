@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fruits_app/core/constants/image_app.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
-import 'package:fruits_app/feature/basket/basket_screen.dart';
+import 'package:fruits_app/feature/basket/screen/basket_screen.dart';
+import 'package:fruits_app/feature/favorite_screen/favorite_screen.dart';
 import 'package:fruits_app/feature/home/pages/home_screen.dart';
+import 'package:fruits_app/feature/more_screen/more_screen.dart';
+import 'package:fruits_app/feature/order_screen/screens/order_screen.dart';
 
 class MainAPPScreen extends StatefulWidget {
   const MainAPPScreen({super.key});
@@ -16,10 +19,10 @@ class _MainAPPScreenState extends State<MainAPPScreen> {
   int currentindex=0;
   List<Widget>screen=[
       HomeScreen(),
-       Container(color: Colors.black,),
-        BasketScreen(),
-       Container(color: Colors.blue,),
-       Container(color: Colors.amber,)
+      OrderScreen(),
+      BasketScreen(),
+      FavoriteScreen(),
+      MoreScreen()
 
     ];
 
@@ -48,7 +51,8 @@ class _MainAPPScreenState extends State<MainAPPScreen> {
           BottomNavigationBarItem(icon:SvgPicture.asset(ImageApp.basketSvg),label: "Basket",),
           BottomNavigationBarItem(icon:SvgPicture.asset(ImageApp.favoriteSvg),label: "Favorite",),
           BottomNavigationBarItem(icon:SvgPicture.asset(ImageApp.moreSvg),label: "More",)
-      ] ) ,
+      ]
+       ) ,
     );
   }
 }
