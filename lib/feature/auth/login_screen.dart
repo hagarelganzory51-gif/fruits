@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/function/navigation.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/text_styles.dart';
 import 'package:fruits_app/core/widgets/main_button.dart';
 import 'package:fruits_app/core/widgets/text_field_widgets.dart';
+import 'package:fruits_app/feature/auth/phonenumber_screen.dart';
+import 'package:fruits_app/feature/auth/signup_screen.dart';
+import 'package:fruits_app/feature/home/pages/home_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -51,7 +55,9 @@ class LoginScreen extends StatelessWidget {
                      children: [
                        Column(
                          children: [
-                           TextButton(onPressed: (){}, 
+                           TextButton(onPressed: (){
+                            pushReplacement(context, PhoneNumberScreen());
+                           }, 
                               child: Text('Forget Password?',style: TextStyles.style18.copyWith(
                                 fontWeight: FontWeight.w400,
                                 color: AppColors.bluecolor
@@ -70,7 +76,9 @@ class LoginScreen extends StatelessWidget {
 
                 SizedBox(
                   width:double.infinity ,height: 60,
-                  child: MainButton(onPressed: (){},text: 'Login')),
+                  child: MainButton(onPressed: (){
+                    pushReplacement(context, HomeScreen());
+                  },text: 'Login')),
   
                   SizedBox(height: 35,),
                  Row(
@@ -81,7 +89,9 @@ class LoginScreen extends StatelessWidget {
                   )),
                   Column(
                     children: [
-                      TextButton(onPressed: (){}, 
+                      TextButton(onPressed: (){
+                        pushTo(context, SignupScreen());
+                      }, 
                       child: Text('Sign Up',style: TextStyles.style18.copyWith(
                         fontWeight: FontWeight.w400,
                         color: AppColors.bluecolor

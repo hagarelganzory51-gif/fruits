@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/function/navigation.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/text_styles.dart';
 import 'package:fruits_app/core/widgets/main_button.dart';
 import 'package:fruits_app/core/widgets/text_field_widgets.dart';
+import 'package:fruits_app/feature/auth/otp_screen.dart';
 
 class PhoneNumberScreen extends StatelessWidget {
   const PhoneNumberScreen({super.key});
@@ -36,7 +38,9 @@ class PhoneNumberScreen extends StatelessWidget {
                  SizedBox(height: 40,), 
                 SizedBox(
                   width:double.infinity ,height: 60,
-                  child: MainButton(onPressed: (){},text: 'Submit')),
+                  child: MainButton(onPressed: (){
+                    pushTo(context, OtpScreen());
+                  },text: 'Submit')),
   
                  
           ],

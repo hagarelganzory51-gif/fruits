@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/image_app.dart';
+import 'package:fruits_app/core/function/navigation.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/text_styles.dart';
 import 'package:fruits_app/core/widgets/smooth_page.dart';
+import 'package:fruits_app/feature/auth/welcome_screen.dart';
 import 'package:fruits_app/feature/onboarding/models/ondoading_model.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -25,7 +27,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         if(currentPage != onboardingData.length - 1)
         Column(
           children: [
-            TextButton(onPressed: (){},
+            TextButton(onPressed: (){
+              pushReplacement(context,WelcomeScreen());
+            },
             child: Text("Skip",
             style: TextStyles.style18.copyWith(
             fontWeight: FontWeight.w400, color: AppColors.darkColor),)),
@@ -69,7 +73,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
           
-          SmoothPage(pageController: pageController, currentPage: currentPage),
+          SmoothPage(pageController: pageController,
+           currentPage: currentPage),
         ],
       ),
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/function/navigation.dart'; 
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/widgets/main_button.dart';
+import 'package:fruits_app/feature/auth/welcome_screen.dart';
 import 'package:fruits_app/feature/onboarding/models/ondoading_model.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart' as smoothpageindicator;
 
@@ -18,10 +20,10 @@ class SmoothPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
-        children:[
+        children: [
           smoothpageindicator.SmoothPageIndicator(
             controller: pageController,
-            count: 3,
+            count: onboardingData.length, 
             effect: smoothpageindicator.ExpandingDotsEffect(
               activeDotColor: AppColors.primaryColor,
               dotColor: AppColors.primaryColor,
@@ -30,16 +32,22 @@ class SmoothPage extends StatelessWidget {
               spacing: 5,
             ),
           ),
-       SizedBox(height: 40),
-        MainButton(
-          text:currentPage == onboardingData.length - 1 ? "Get Started" : "Next",
-          onPressed: (){
-    
-          },
-        ),
-        
-        SizedBox(height: 100),
-        ]
+          const SizedBox(height: 40),
+          MainButton(
+            text: currentPage == onboardingData.length - 1 ? "Get Started" : "Next",
+            onPressed: () {
+              if (currentPage == onboardingData.length - 1) {
+                pushReplacement(context, WelcomeScreen());
+              } else {
+                pageController.nextPage(
+                  duration: const Duration(milliseconds: 300),
+                  curve: Curves.easeInOut,
+                );
+              }
+            },
+          ),
+          const SizedBox(height: 100),
+        ],
       ),
     );
   }

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruits_app/core/constants/image_app.dart';
+import 'package:fruits_app/core/function/navigation.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/text_styles.dart';
 import 'package:fruits_app/core/widgets/sign_google.dart';
 import 'package:fruits_app/core/widgets/text_field_widgets.dart';
+import 'package:fruits_app/feature/auth/login_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -56,7 +58,9 @@ class WelcomeScreen extends StatelessWidget {
                   )),
                   Column(
                     children: [
-                      TextButton(onPressed: (){}, 
+                      TextButton(onPressed: (){
+                        pushReplacement(context, LoginScreen());
+                      }, 
                       child: Text('Sign In',style: TextStyles.style18.copyWith(
                         fontWeight: FontWeight.w400,
                         

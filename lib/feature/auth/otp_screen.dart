@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/function/navigation.dart';
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/text_styles.dart';
 import 'package:fruits_app/core/widgets/main_button.dart';
+import 'package:fruits_app/feature/main_app/main_app_screen.dart';
 import 'package:pinput/pinput.dart';
 
 class OtpScreen extends StatefulWidget {
@@ -52,7 +54,9 @@ class _OtpScreenState extends State<OtpScreen> {
                
                 SizedBox(
                   width:double.infinity ,height: 60,
-                  child: MainButton(onPressed: (){},text: 'Confirm')),
+                  child: MainButton(onPressed: (){
+                    pushReplacement(context, MainAPPScreen());
+                  },text: 'Confirm')),
                    SizedBox(height: 50,),
                    Row(
                 mainAxisAlignment:MainAxisAlignment.center ,
