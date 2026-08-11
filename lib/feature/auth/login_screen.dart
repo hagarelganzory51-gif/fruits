@@ -7,6 +7,7 @@ import 'package:fruits_app/core/widgets/text_field_widgets.dart';
 import 'package:fruits_app/feature/auth/phonenumber_screen.dart';
 import 'package:fruits_app/feature/auth/signup_screen.dart';
 import 'package:fruits_app/feature/home/pages/home_screen.dart';
+import 'package:fruits_app/feature/main_app/main_app_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -77,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(
                   width:double.infinity ,height: 60,
                   child: MainButton(onPressed: (){
-                    pushReplacement(context, HomeScreen());
+                    pushReplacement(context, MainAPPScreen());
                   },text: 'Login')),
   
                   SizedBox(height: 35,),
