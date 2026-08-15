@@ -17,6 +17,7 @@ dependencies:
   google_nav_bar: ^5.0.7
   firebase_core: ^4.13.0
   firebase_messaging: ^16.5.0
+  onesignal_flutter: ^5.6.7
 
 dev_dependencies:
   flutter_test:

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/app_font.dart';
 import 'package:fruits_app/feature/splash/splash_screen.dart';
 import 'package:fruits_app/firebase_options.dart';
+import 'package:onesignal_flutter/onesignal_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,6 +13,13 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  OneSignal.initialize("ca72bb0b-fbbb-4e04-8b3a-e4beba6d89cb");
+    await OneSignal.Notifications.requestPermission(true);
+
+    OneSignal.Notifications.addClickListener((event) {
+  
+});
+
   FirebaseMessaging messaging = FirebaseMessaging.instance;
 
 NotificationSettings settings = await messaging.requestPermission(
