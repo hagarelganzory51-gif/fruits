@@ -3,7 +3,7 @@ import 'package:fruits_app/core/function/navigation.dart' as navigator;
 import 'package:fruits_app/core/utils/app_colors.dart';
 import 'package:fruits_app/core/utils/text_styles.dart';
 import 'package:fruits_app/feature/main_app/main_app_screen.dart';
-import 'package:fruits_app/feature/order_screen/screens/order_traking_screen.dart'; // غيري المسار لمكان OrderTrackingScreen
+import 'package:fruits_app/feature/order_screen/screens/order_traking_screen.dart'; 
 
 class OrderScreen extends StatelessWidget {
   const OrderScreen({super.key});
